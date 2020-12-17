@@ -34,7 +34,7 @@ function Row({ title, fetchUrl, isLargeRow, handleInfo }) {
                 : movie.backdrop_path || movie.poster_path
             }`}
             alt={movie.name}
-            onClick={() => handleInfo(movie.id)}
+            onClick={() => handleInfo(movie)}
           />
         ))}
       </div>

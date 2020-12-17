@@ -32,11 +32,15 @@ function App(props) {
 
   const [details, setDetails] = useState({
     id: "",
+    media_type: "",
   });
 
-  function handleInfo(info) {
-    console.log(info);
-    setDetails(info);
+  function handleInfo(movie) {
+    console.log(movie);
+    setDetails({
+      ...details,
+      [movie]: [movie],
+    });
     props.history.push("/show/:id");
   }
 
