@@ -110,23 +110,12 @@ function SearchPage(props) {
             {searchData.results?.map((a) => (
               <div key={a?.id} style={{ objectFit: "contain" }}>
                 <img
-                  // check sink
-                  // {a?${imageUrl}a.poster_path}
-                  // if (a?.poster_path) {
-                  //   src={`${imageUrl}${a?.poster_path}`}
-                  // } else if () {
-
-                  // } {
-
-                  // }
-
-                  // {|| a?.known_for && [null] || a?.know_for && a?.known_for[0].poster_path}
-
                   src={`${imageUrl}${
                     a?.poster_path ||
                     a?.profile_path ||
-                    (!a?.known_for && "/dfa2wl1TyOJQ1KZbrj2PqLVPH1u.jpg") ||
-                    (!a?.poster_path && "/dfa2wl1TyOJQ1KZbrj2PqLVPH1u.jpg")
+                    (a?.known_for &&
+                      a.known_for.length &&
+                      a?.known_for[0].poster_path)
                   }`}
                   alt={
                     a?.title || a?.name || a?.original_title || a?.original_name
@@ -144,3 +133,16 @@ function SearchPage(props) {
 }
 
 export default SearchPage;
+
+// check sink
+// {a?${imageUrl}a.poster_path}
+// if (a?.poster_path) {
+//   src={`${imageUrl}${a?.poster_path}`}
+// } else if () {
+
+// } {
+
+// }
+
+// {|| a?.known_for && [null] || a?.known_for && a?.known_for[0].poster_path}
+// || (!a?.known_for && "/dfa2wl1TyOJQ1KZbrj2PqLVPH1u.jpg") ||(!a?.poster_path && "/dfa2wl1TyOJQ1KZbrj2PqLVPH1u.jpg")
