@@ -9,6 +9,11 @@ function Sidebar(props) {
   //   props.showSidebar();
   // }
 
+  function logoutCloseSide() {
+    props.handleLogout();
+    props.showSidebar();
+  }
+
   return (
     <nav className={props.sidebar ? "sidebar__active" : "sidebar__menu"}>
       <ul className="sidebar__menuItems" onClick={props.showSidebar}>
@@ -48,7 +53,8 @@ function Sidebar(props) {
         <div className="sidebar__logoutContainer">
           <button
             className="sidebar__logoutButton"
-            onClick={props.handleLogout}
+            // onClick={props.handleLogout}
+            onClick={() => logoutCloseSide()}
           >
             Log Out
           </button>
