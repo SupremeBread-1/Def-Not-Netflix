@@ -1,0 +1,11 @@
+.show__content {
+  position: absolute;
+  color: #fff;
+  border: 2px solid blue;
+  height: 300px;
+}
+
+.show__description {
+  width: 45rem;
+  max-width: 360px;
+}

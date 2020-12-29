@@ -59,13 +59,20 @@ function App(props) {
       // const fullGenre = request.concat(reqtwo);
       // const fullGenre = Object.assign({}, request, reqtwo);
       var fullGenre = [...request.genres, ...reqtwo.genres];
-      setGenreList(fullGenre);
+      // var unqiueFullGenre = [...new Set(fullGenre)];
+      // setGenreList(unqiueFullGenre);
       // console.log(request.genres);
       // console.log(reqtwo.genres);
       // console.log(fullGenre);
-      console.log("ok");
-
-      return fullGenre;
+      // console.log("ok");
+      let ids = fullGenre.map((o) => o.id);
+      let filtered = fullGenre.filter(
+        ({ id }, index) => !ids.includes(id, index + 1)
+      );
+      // setGenreList(fullGenre);
+      // return fullGenre;
+      setGenreList(filtered);
+      return filtered;
     }
     handleGenre().then((genreList) => console.log(genreList));
     // handleGenre(tvString);

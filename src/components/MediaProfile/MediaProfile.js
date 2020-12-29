@@ -1,4 +1,5 @@
 import React from "react";
+import "./MediaProfile.css";
 
 function MediaProfile(props) {
   console.log(props.grabItems);
@@ -21,21 +22,32 @@ function MediaProfile(props) {
         // console.log(typeof list.id);
         if (list.id == genre) {
           console.log(list.name);
+          genreArr.push(list.name);
           //   return list.name;
         } else {
           console.log("not it");
         }
       }
     }
+    console.log(genreArr);
+    return genreArr.toString();
   }
 
-  genreFind(media[0]?.genre_ids);
+  //   genreFind(media[0]?.genre_ids);
 
   return (
     <div className="show__bigContainer">
-      <div>
+      <div className="show__content">
         <h1>{media[0]?.title || media[0]?.name || media[0]?.original_name}</h1>
-        <p></p>
+        <p>
+          {media[0]?.first_air_date
+            ? media[0]?.first_air_date.substr(0, 4)
+            : media[0]?.release_date.substr(0, 4)}
+          <span>{media[0]?.original_language}</span>
+          <span>{media[0]?.vote_average}</span>
+        </p>
+        <p>{genreFind(media[0]?.genre_ids)}</p>
+        <p className="show__description">{media[0]?.overview}</p>
       </div>
       <div>{/* background image div with inset box shadow */}</div>
     </div>
@@ -65,3 +77,7 @@ export default MediaProfile;
 
 // box-shadow total cover CSS
 // box-shadow: 0 0 15px 5px red inset;
+
+// style={{
+//     background: `url('https://image.tmdb.org/t/p/original${media[0]?.backdrop_path}') center center/cover`,
+//   }}

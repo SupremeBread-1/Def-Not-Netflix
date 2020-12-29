@@ -3,7 +3,7 @@
   min-height: 100vh;
   height: 110vh;
   position: relative;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .show__bigContainer {
@@ -14,4 +14,6 @@
   width: 100vw;
   display: flex;
   border: 2px solid red;
+  /* justify-content: center; */
+  align-items: center;
 }

@@ -34,7 +34,7 @@ function Banner(props) {
     <header
       className="banner"
       style={{
-        background: `url('https://image.tmdb.org/t/p/original/${
+        background: `url('https://image.tmdb.org/t/p/original${
           bannerMovie?.backdrop_path || bannerMovie?.poster_path
         }') center top/cover `,
       }}
@@ -59,3 +59,9 @@ function Banner(props) {
 }
 
 export default Banner;
+
+// || undefined
+// ? bannerMovie?.title ||
+//   bannerMovie?.name ||
+//   bannerMovie?.original_name
+// : null
