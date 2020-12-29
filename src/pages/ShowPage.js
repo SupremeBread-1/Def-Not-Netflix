@@ -13,6 +13,7 @@ function ShowPage(props) {
   const grabItems = [props.details[`[object Object]`][0]];
   console.log(grabItems[0].id);
   console.log(grabItems[0].poster_path);
+  console.log(props.genreList);
 
   return (
     <div className="show__page">
@@ -21,6 +22,11 @@ function ShowPage(props) {
         <p>{grabItems[0]?.id}</p>
         <p>{grabItems[0]?.poster_path}</p>
         <p>{grabItems[0]?.media_type}</p>
+        <p>
+          {grabItems[0]?.genre_ids?.map((i) => (
+            <span>{i}</span>
+          ))}
+        </p>
         <iframe
           width="560"
           height="315"

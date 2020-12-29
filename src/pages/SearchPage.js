@@ -108,7 +108,11 @@ function SearchPage(props) {
           {/* <Box searchparams={searchparams} searchForm={searchForm} /> */}
           <div className="trap">
             {searchData.results?.map((a) => (
-              <div key={a?.id} style={{ objectFit: "contain" }}>
+              <div
+                key={a?.id}
+                style={{ objectFit: "contain" }}
+                onClick={() => props.handleInfo(a)}
+              >
                 <img
                   src={`${imageUrl}${
                     a?.poster_path ||

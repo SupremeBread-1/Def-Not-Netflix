@@ -24,3 +24,9 @@ export function red(query) {
     `https://api.themoviedb.org/3/search/multi?api_key=${API_KEY}&language=en-US&query=${query}&page=1&include_adult=false`
   ).then((res) => res.json());
 }
+
+export function blue(query) {
+  return fetch(
+    `https://api.themoviedb.org/3/genre/${query}/list?api_key=${API_KEY}&language=en-US`
+  ).then((res) => res.json());
+}

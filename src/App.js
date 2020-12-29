@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 
 import Footer from "./components/Footer/Footer";
@@ -12,6 +12,8 @@ import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 
 import { getUser, logout } from "./services/userService";
 import ShowPage from "./pages/ShowPage";
+
+import { blue } from "./services/requestService";
 
 function App(props) {
   const [userState, setUserState] = useState({
@@ -44,6 +46,32 @@ function App(props) {
     props.history.push("/show/:id");
   }
 
+  const [genreList, setGenreList] = useState({
+    genre: "",
+  });
+
+  useEffect(() => {
+    // const movieString = "movie";
+    // const tvString = "tv";
+    async function handleGenre() {
+      const request = await blue("movie");
+      const reqtwo = await blue("tv");
+      // const fullGenre = request.concat(reqtwo);
+      // const fullGenre = Object.assign({}, request, reqtwo);
+      var fullGenre = [...request.genres, ...reqtwo.genres];
+      setGenreList(fullGenre);
+      // console.log(request.genres);
+      // console.log(reqtwo.genres);
+      // console.log(fullGenre);
+      console.log("ok");
+
+      return fullGenre;
+    }
+    handleGenre().then((genreList) => console.log(genreList));
+    // handleGenre(tvString);
+    // console.log(genreList);
+  }, []);
+
   return (
     <div className="App">
       <Switch>
@@ -66,7 +94,7 @@ function App(props) {
               <SearchPage
                 user={userState.user}
                 handleLogout={handleLogout}
-                // handleInfo={handleInfo}
+                handleInfo={handleInfo}
               />
             ) : (
               <Redirect to="/login" />
@@ -80,6 +108,7 @@ function App(props) {
               user={userState.user}
               handleLogout={handleLogout}
               details={details}
+              genreList={genreList}
             />
           )}
         />
