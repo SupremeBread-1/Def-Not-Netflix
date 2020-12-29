@@ -1,0 +1,67 @@
+import React from "react";
+
+function MediaProfile(props) {
+  console.log(props.grabItems);
+  const media = props.grabItems;
+
+  console.log(props.genreList);
+  const lister = props.genreList;
+
+  function genreFind(id) {
+    const genreArr = [];
+    for (const genre of id) {
+      console.log(genre);
+      //   console.log(typeof genre);
+
+      //   if(!id.hasOwnProperty(genre)) continue;
+      //   if(id[genre] === "")
+      for (const list of lister) {
+        // if (!lister.hasOwnProperty(list)) continue;
+        // console.log(list.id);
+        // console.log(typeof list.id);
+        if (list.id == genre) {
+          console.log(list.name);
+          //   return list.name;
+        } else {
+          console.log("not it");
+        }
+      }
+    }
+  }
+
+  genreFind(media[0]?.genre_ids);
+
+  return (
+    <div className="show__bigContainer">
+      <div>
+        <h1>{media[0]?.title || media[0]?.name || media[0]?.original_name}</h1>
+        <p></p>
+      </div>
+      <div>{/* background image div with inset box shadow */}</div>
+    </div>
+  );
+}
+
+export default MediaProfile;
+
+{
+  /* <p>{props.grabItems[0]?.id}</p>
+      <p>{props.grabItems[0]?.poster_path}</p>
+      <p>{props.grabItems[0]?.media_type}</p>
+      <p>
+        {props.grabItems[0]?.genre_ids?.map((i) => (
+          <span>{i}</span>
+        ))}
+      </p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/AZGcmvrTX9M?autoplay=0&showinfo=0&controls=0"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe> */
+}
+
+// box-shadow total cover CSS
+// box-shadow: 0 0 15px 5px red inset;
