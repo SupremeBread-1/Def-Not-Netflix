@@ -49,7 +49,15 @@ function MediaProfile(props) {
         <p>{genreFind(media[0]?.genre_ids)}</p>
         <p className="show__description">{media[0]?.overview}</p>
       </div>
-      <div>{/* background image div with inset box shadow */}</div>
+      <div className="show__backgroundBigContainer">
+        {/* background image div with inset box shadow */}
+        <div
+          className="show__backgroundLittleContainer"
+          style={{
+            background: `url('https://image.tmdb.org/t/p/original${media[0]?.backdrop_path}') center center/cover`,
+          }}
+        ></div>
+      </div>
     </div>
   );
 }

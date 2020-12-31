@@ -1,11 +1,31 @@
 .show__content {
   position: absolute;
+  margin-left: 30px;
   color: #fff;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   height: 300px;
+  z-index: 2;
 }
 
 .show__description {
   width: 45rem;
   max-width: 360px;
 }
+
+.show__backgroundBigContainer {
+  /* border: 2px solid yellow; */
+  height: 100%;
+  width: 60%;
+  position: absolute;
+  right: 0;
+}
+
+.show__backgroundLittleContainer {
+  height: 100%;
+  /* border: 2px solid white; */
+  box-shadow: 0 0 10px 20px #111 inset;
+  /* object-fit: contain; */
+  object-fit: scale-down;
+}
+
+/* 30px  */
