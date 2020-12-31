@@ -7,9 +7,33 @@
   z-index: 2;
 }
 
+.show__title {
+  font-size: 3rem;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+  /* border: 2px solid red; */
+}
+
+.show__details {
+  padding-bottom: 0.4rem;
+  /* margin-bottom: 300px; */
+  /* border: 2px solid blue; */
+}
+
+.show__language {
+  color: #111;
+  background: #fff;
+  padding: 5px 7px;
+  border-radius: 8px;
+}
+
 .show__description {
   width: 45rem;
   max-width: 360px;
+  line-height: 1.3;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  text-shadow: 0.7px 0.2px silver;
 }
 
 .show__backgroundBigContainer {

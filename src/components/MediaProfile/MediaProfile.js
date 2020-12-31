@@ -20,7 +20,7 @@ function MediaProfile(props) {
         // if (!lister.hasOwnProperty(list)) continue;
         // console.log(list.id);
         // console.log(typeof list.id);
-        if (list.id == genre) {
+        if (list.id === genre) {
           console.log(list.name);
           genreArr.push(list.name);
           //   return list.name;
@@ -38,12 +38,14 @@ function MediaProfile(props) {
   return (
     <div className="show__bigContainer">
       <div className="show__content">
-        <h1>{media[0]?.title || media[0]?.name || media[0]?.original_name}</h1>
-        <p>
+        <h1 className="show__title">
+          {media[0]?.title || media[0]?.name || media[0]?.original_name}
+        </h1>
+        <p className="show__details">
           {media[0]?.first_air_date
             ? media[0]?.first_air_date.substr(0, 4)
             : media[0]?.release_date.substr(0, 4)}
-          <span>{media[0]?.original_language}</span>
+          <span className="show__language">{media[0]?.original_language}</span>
           <span>{media[0]?.vote_average}</span>
         </p>
         <p>{genreFind(media[0]?.genre_ids)}</p>
