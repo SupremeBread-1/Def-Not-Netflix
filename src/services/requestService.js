@@ -30,3 +30,9 @@ export function blue(query) {
     `https://api.themoviedb.org/3/genre/${query}/list?api_key=${API_KEY}&language=en-US`
   ).then((res) => res.json());
 }
+
+export function green(type, id) {
+  return fetch(
+    `https://api.themoviedb.org/3/${type}/${id}/images?api_key=${API_KEY}&append_to_response=videos`
+  ).then((res) => res.json());
+}

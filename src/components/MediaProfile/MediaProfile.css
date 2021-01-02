@@ -4,7 +4,7 @@
   color: #fff;
   /* border: 2px solid blue; */
   height: 300px;
-  z-index: 2;
+  z-index: 1;
 }
 
 .show__title {

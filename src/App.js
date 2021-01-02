@@ -13,7 +13,7 @@ import { Switch, Route, withRouter, Redirect } from "react-router-dom";
 import { getUser, logout } from "./services/userService";
 import ShowPage from "./pages/ShowPage";
 
-import { blue } from "./services/requestService";
+import { blue, green } from "./services/requestService";
 
 function App(props) {
   const [userState, setUserState] = useState({
@@ -37,12 +37,23 @@ function App(props) {
     media_type: "",
   });
 
+  const [imgVid, setImgVid] = useState({
+    img: [],
+    vid: [],
+  });
+
   function handleInfo(movie) {
     console.log(movie);
     setDetails({
       ...details,
       [movie]: [movie],
     });
+
+    // if initial green tv request returns success : false then run second round of async with green movie then possibly person as well?
+    // async function handleImgVid() {
+    //   const
+    // }
+
     props.history.push("/show/:id");
   }
 

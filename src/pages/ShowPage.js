@@ -6,7 +6,7 @@ import "./ShowPage.css";
 
 function ShowPage(props) {
   //   const va = this.props.location.param1;
-  // console.log(props);
+  console.log(props);
 
   const [showMovie, setShowMovie] = useState({
     show: [],
