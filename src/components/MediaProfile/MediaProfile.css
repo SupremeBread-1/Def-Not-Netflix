@@ -10,8 +10,10 @@
 .show__title {
   font-size: 3rem;
   font-weight: 800;
-  padding-bottom: 0.3rem;
+  padding-bottom: 0.4rem;
   /* border: 2px solid red; */
+  width: 45rem;
+  max-width: 400px;
 }
 
 .show__details {
@@ -38,8 +40,10 @@
 
 .show__backgroundBigContainer {
   /* border: 2px solid yellow; */
+  border: 2px solid #111;
   height: 100%;
-  width: 60%;
+  /* height: 56%; */
+  width: 80%;
   position: absolute;
   right: 0;
 }
@@ -47,7 +51,9 @@
 .show__backgroundLittleContainer {
   height: 100%;
   /* border: 2px solid white; */
+  /* border: 2px solid rgba(17, 17, 17, 1); */
   box-shadow: 0 0 10px 20px #111 inset;
+  /* box-shadow: 0 0 30px 30px rgba(17, 17, 17, 1) inset; */
   /* object-fit: contain; */
   object-fit: scale-down;
 }
