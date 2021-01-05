@@ -56,14 +56,27 @@ function App(props) {
 
     async function mediaCheck() {
       const test1 = await green("tv", movie.id);
+      const test2 = await green("movie", movie.id);
+      const test3 = await green("person", movie.id);
       // if (test1 === undefined) {
       //   console.log(test1);
       // } else {
       //   return test1;
       // }
       console.log(test1);
+      console.log(test2);
+      console.log(test3);
+      console.log(test1.success);
+      console.log(test2.success);
+      console.log(test3.success);
+      return test1.success === undefined
+        ? console.log(test1)
+        : test2.success === undefined
+        ? console.log(test2)
+        : test3.success === undefined
+        ? console.log(test3)
+        : console.log("nope");
 
-      return test1;
       // console.log(test1);
     }
     mediaCheck();
