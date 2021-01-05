@@ -54,6 +54,20 @@ function App(props) {
     //   const
     // }
 
+    async function mediaCheck() {
+      const test1 = await green("tv", movie.id);
+      // if (test1 === undefined) {
+      //   console.log(test1);
+      // } else {
+      //   return test1;
+      // }
+      console.log(test1);
+
+      return test1;
+      // console.log(test1);
+    }
+    mediaCheck();
+
     props.history.push("/show/:id");
   }
 
