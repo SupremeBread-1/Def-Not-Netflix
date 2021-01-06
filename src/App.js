@@ -62,8 +62,54 @@ function App(props) {
       console.log(test1);
       console.log(test2);
       console.log(test3);
-
       console.log(test2.images);
+      // console.log(test1[0]);
+
+      console.log(movie?.title || movie?.name || movie?.original_name);
+
+      test1?.title ||
+      test1?.name ||
+      test1?.original_name === movie?.title ||
+      movie?.name ||
+      movie?.original_name
+        ? console.log(
+            "test1",
+            test1?.title,
+            test1?.name,
+            test1?.original_name,
+            movie?.title,
+            movie?.name,
+            movie?.original_name
+          )
+        : test2?.title ||
+          test2?.name ||
+          test2?.original_name === movie?.title ||
+          movie?.name ||
+          movie?.original_name
+        ? console.log(
+            "test2",
+            test2?.title,
+            test2?.name,
+            test2?.original_name,
+            movie?.title,
+            movie?.name,
+            movie?.original_name
+          )
+        : test3?.title ||
+          test3?.name ||
+          test3?.original_name === movie?.title ||
+          movie?.name ||
+          movie?.original_name
+        ? console.log(
+            "test3",
+            test3?.title,
+            test3?.name,
+            test3?.original_name,
+            movie?.title,
+            movie?.name,
+            movie?.original_name
+          )
+        : console.log("none of the above");
     }
     mediaCheck();
 
