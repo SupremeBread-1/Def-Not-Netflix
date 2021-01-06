@@ -33,6 +33,6 @@ export function blue(query) {
 
 export function green(type, id) {
   return fetch(
-    `https://api.themoviedb.org/3/${type}/${id}/images?api_key=${API_KEY}&append_to_response=videos`
+    `https://api.themoviedb.org/3/${type}/${id}?api_key=${API_KEY}&append_to_response=images,videos`
   ).then((res) => res.json());
 }
