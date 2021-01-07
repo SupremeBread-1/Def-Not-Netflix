@@ -76,8 +76,10 @@ function App(props) {
             movie?.name ||
             movie?.original_name
           ) {
-            console.log(test3?.title || test3?.name || test3?.original_name);
+            // console.log(test3?.title || test3?.name || test3?.original_name);
             // return test3;
+            setImgVid([test3?.images, test3?.videos]);
+            return;
           } else {
             console.log("broken beyond repair");
           }
@@ -89,7 +91,10 @@ function App(props) {
             movie?.name ||
             movie?.original_name
           ) {
-            console.log(test2?.title || test2?.name || test2?.original_name);
+            // console.log(test2?.title || test2?.name || test2?.original_name);
+            // return test2;
+            setImgVid([test2?.images, test2?.videos]);
+            return;
           } else {
             if (
               test3?.title ||
@@ -98,8 +103,10 @@ function App(props) {
               movie?.name ||
               movie?.original_name
             ) {
-              console.log(test3?.title || test3?.name || test3?.original_name);
+              // console.log(test3?.title || test3?.name || test3?.original_name);
               // return test3;
+              setImgVid([test3?.images, test3?.videos]);
+              return;
             } else {
               console.log("broken beyond repair");
             }
@@ -114,8 +121,11 @@ function App(props) {
           movie?.name ||
           movie?.original_name
         ) {
+          // console.log(test1?.title || test1?.name || test1?.original_name);
           // return test1;
-          console.log(test1?.title || test1?.name || test1?.original_name);
+          setImgVid([test1?.images, test1?.videos]);
+          // console.log(imgVid);
+          return;
         } else {
           if (test2.success === false) {
             if (
@@ -125,7 +135,10 @@ function App(props) {
               movie?.name ||
               movie?.original_name
             ) {
-              console.log(test3?.title || test3?.name || test3?.original_name);
+              // console.log(test3?.title || test3?.name || test3?.original_name);
+              // return test3;
+              setImgVid([test3?.images, test3?.videos]);
+              return;
             } else {
               console.log("broken beyond repair");
             }
@@ -137,7 +150,10 @@ function App(props) {
               movie?.name ||
               movie?.original_name
             ) {
-              console.log(test2?.title || test2?.name || test2?.original_name);
+              // console.log(test2?.title || test2?.name || test2?.original_name);
+              // return test2;
+              setImgVid([test2?.images, test2?.videos]);
+              return;
             } else {
               if (
                 test3?.title ||
@@ -146,10 +162,10 @@ function App(props) {
                 movie?.name ||
                 movie?.original_name
               ) {
-                console.log(
-                  test3?.title || test3?.name || test3?.original_name
-                );
+                // console.log(test3?.title || test3?.name || test3?.original_name);
                 // return test3;
+                setImgVid([test3?.images, test3?.videos]);
+                return;
               } else {
                 console.log("broken beyond repair");
               }
@@ -233,6 +249,7 @@ function App(props) {
               handleLogout={handleLogout}
               details={details}
               genreList={genreList}
+              imgVid={imgVid}
             />
           )}
         />

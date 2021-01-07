@@ -2,7 +2,7 @@
   position: absolute;
   margin-left: 30px;
   color: #fff;
-  /* border: 2px solid blue; */
+  border: 2px solid blue;
   height: 300px;
   z-index: 1;
 }
@@ -39,8 +39,8 @@
 }
 
 .show__backgroundBigContainer {
-  /* border: 2px solid yellow; */
   border: 2px solid #111;
+  border: 2px solid yellow;
   /* height: 100%; */
   /* height: 56%; */
   /* width: 80%; */

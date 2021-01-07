@@ -7,6 +7,7 @@ import "./ShowPage.css";
 function ShowPage(props) {
   //   const va = this.props.location.param1;
   console.log(props);
+  // console.log(props.imgVid);
 
   // const [showMovie, setShowMovie] = useState({
   //   show: [],
@@ -17,13 +18,19 @@ function ShowPage(props) {
   // console.log(grabItems[0].poster_path);
   // console.log(props.genreList);
 
+  const imagesVideos = props.imgVid;
+
   return (
     <div className="show__page">
       <Header user={props.user} handleLogout={props.handleLogout} />
       {grabItems[0].media_type === "person" ? (
-        <PersonProfile grabItems={grabItems} />
+        <PersonProfile grabItems={grabItems} imagesVideos={imagesVideos} />
       ) : (
-        <MediaProfile grabItems={grabItems} genreList={props.genreList} />
+        <MediaProfile
+          grabItems={grabItems}
+          genreList={props.genreList}
+          imagesVideos={imagesVideos}
+        />
       )}
     </div>
   );

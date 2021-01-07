@@ -1,5 +1,6 @@
 import React from "react";
 import "./MediaProfile.css";
+import Row from "../Row/Row";
 
 function MediaProfile(props) {
   // console.log(props.grabItems);
@@ -60,6 +61,9 @@ function MediaProfile(props) {
             background: `url('https://image.tmdb.org/t/p/original${media[0]?.backdrop_path}') center center/cover`,
           }}
         ></div>
+      </div>
+      <div className="show__imgvid">
+        <Row />
       </div>
     </div>
   );
