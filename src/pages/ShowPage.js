@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header/Header";
 import PersonProfile from "../components/PersonProfile/PersonProfile";
 import MediaProfile from "../components/MediaProfile/MediaProfile";
@@ -8,14 +8,14 @@ function ShowPage(props) {
   //   const va = this.props.location.param1;
   console.log(props);
 
-  const [showMovie, setShowMovie] = useState({
-    show: [],
-  });
+  // const [showMovie, setShowMovie] = useState({
+  //   show: [],
+  // });
 
   const grabItems = [props.details[`[object Object]`][0]];
-  console.log(grabItems[0].id);
-  console.log(grabItems[0].poster_path);
-  console.log(props.genreList);
+  // console.log(grabItems[0].id);
+  // console.log(grabItems[0].poster_path);
+  // console.log(props.genreList);
 
   return (
     <div className="show__page">

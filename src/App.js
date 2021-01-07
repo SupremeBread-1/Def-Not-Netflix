@@ -62,54 +62,101 @@ function App(props) {
       console.log(test1);
       console.log(test2);
       console.log(test3);
-      console.log(test2.images);
+      // console.log(test2.images);
       // console.log(test1[0]);
 
       console.log(movie?.title || movie?.name || movie?.original_name);
 
-      test1?.title ||
-      test1?.name ||
-      test1?.original_name === movie?.title ||
-      movie?.name ||
-      movie?.original_name
-        ? console.log(
-            "test1",
-            test1?.title,
-            test1?.name,
-            test1?.original_name,
-            movie?.title,
-            movie?.name,
+      if (test1.success === false) {
+        if (test2.success === false) {
+          if (
+            test3?.title ||
+            test3?.name ||
+            test3?.original_name === movie?.title ||
+            movie?.name ||
             movie?.original_name
-          )
-        : test2?.title ||
-          test2?.name ||
-          test2?.original_name === movie?.title ||
+          ) {
+            console.log(test3?.title || test3?.name || test3?.original_name);
+            // return test3;
+          } else {
+            console.log("broken beyond repair");
+          }
+        } else {
+          if (
+            test2?.title ||
+            test2?.name ||
+            test2?.original_name === movie?.title ||
+            movie?.name ||
+            movie?.original_name
+          ) {
+            console.log(test2?.title || test2?.name || test2?.original_name);
+          } else {
+            if (
+              test3?.title ||
+              test3?.name ||
+              test3?.original_name === movie?.title ||
+              movie?.name ||
+              movie?.original_name
+            ) {
+              console.log(test3?.title || test3?.name || test3?.original_name);
+              // return test3;
+            } else {
+              console.log("broken beyond repair");
+            }
+          }
+          // return test2;
+        }
+      } else {
+        if (
+          test1?.title ||
+          test1?.name ||
+          test1?.original_name === movie?.title ||
           movie?.name ||
           movie?.original_name
-        ? console.log(
-            "test2",
-            test2?.title,
-            test2?.name,
-            test2?.original_name,
-            movie?.title,
-            movie?.name,
-            movie?.original_name
-          )
-        : test3?.title ||
-          test3?.name ||
-          test3?.original_name === movie?.title ||
-          movie?.name ||
-          movie?.original_name
-        ? console.log(
-            "test3",
-            test3?.title,
-            test3?.name,
-            test3?.original_name,
-            movie?.title,
-            movie?.name,
-            movie?.original_name
-          )
-        : console.log("none of the above");
+        ) {
+          // return test1;
+          console.log(test1?.title || test1?.name || test1?.original_name);
+        } else {
+          if (test2.success === false) {
+            if (
+              test3?.title ||
+              test3?.name ||
+              test3?.original_name === movie?.title ||
+              movie?.name ||
+              movie?.original_name
+            ) {
+              console.log(test3?.title || test3?.name || test3?.original_name);
+            } else {
+              console.log("broken beyond repair");
+            }
+          } else {
+            if (
+              test2?.title ||
+              test2?.name ||
+              test2?.original_name === movie?.title ||
+              movie?.name ||
+              movie?.original_name
+            ) {
+              console.log(test2?.title || test2?.name || test2?.original_name);
+            } else {
+              if (
+                test3?.title ||
+                test3?.name ||
+                test3?.original_name === movie?.title ||
+                movie?.name ||
+                movie?.original_name
+              ) {
+                console.log(
+                  test3?.title || test3?.name || test3?.original_name
+                );
+                // return test3;
+              } else {
+                console.log("broken beyond repair");
+              }
+            }
+          }
+        }
+      }
     }
     mediaCheck();
 
@@ -223,3 +270,61 @@ export default withRouter(App);
 //         : console.log("nope");
 
 //       // console.log(test1);
+
+// test1?.title ||
+//       test1?.name ||
+//       test1?.original_name === movie?.title ||
+//       movie?.name ||
+//       movie?.original_name
+//         ? console.log(
+//             "test1",
+//             test1?.title,
+//             test1?.name,
+//             test1?.original_name,
+//             movie?.title,
+//             movie?.name,
+//             movie?.original_name
+//           )
+//         : test2?.title ||
+//           test2?.name ||
+//           test2?.original_name === movie?.title ||
+//           movie?.name ||
+//           movie?.original_name
+//         ? console.log(
+//             "test2",
+//             test2?.title,
+//             test2?.name,
+//             test2?.original_name,
+//             movie?.title,
+//             movie?.name,
+//             movie?.original_name
+//           )
+//         : test3?.title ||
+//           test3?.name ||
+//           test3?.original_name === movie?.title ||
+//           movie?.name ||
+//           movie?.original_name
+//         ? console.log(
+//             "test3",
+//             test3?.title,
+//             test3?.name,
+//             test3?.original_name,
+//             movie?.title,
+//             movie?.name,
+//             movie?.original_name
+//           )
+//         : console.log("none of the above");
+
+// if(test1.success === false) {
+//  if (test2.success === false) {
+//    return test3;
+//  } else {
+//    return test2;
+//  }
+// } else {
+//   return test1;
+// }
+
+// console.log("test3", test3);
+// console.log("test2", test2);
+// console.log("test1", test1);
