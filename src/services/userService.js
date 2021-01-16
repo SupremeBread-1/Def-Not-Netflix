@@ -1,6 +1,7 @@
 import { setToken, getUserFromToken, removeToken } from "./tokenService";
 
-const BASE_URL = "http://localhost:3001/api/users";
+// const BASE_URL = "http://localhost:3001/api/users";
+const BASE_URL = "https://def-not-netflix-bkend.herokuapp.com/api/users";
 
 function signup(user) {
   return fetch(`${BASE_URL}/signup`, {

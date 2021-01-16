@@ -63,7 +63,7 @@ function MediaProfile(props) {
         ></div>
       </div>
       <div className="show__imgvid">
-        <Row />
+        <Row imgVidShower title="Images" />
       </div>
     </div>
   );
