@@ -191,11 +191,17 @@ function App(props) {
       const reqtwo = await blue("tv");
       // const fullGenre = request.concat(reqtwo);
       // const fullGenre = Object.assign({}, request, reqtwo);
-      var fullGenre = [...request.genres, ...reqtwo.genres];
+      // var fullGenre = [...request.genres, ...reqtwo.genres];
+
+      var partone = request.genres;
+      var parttwo = reqtwo.genres;
+      var fullGenre = [...partone, ...parttwo];
+
       // var unqiueFullGenre = [...new Set(fullGenre)];
       // setGenreList(unqiueFullGenre);
-      // console.log(request.genres);
-      // console.log(reqtwo.genres);
+      console.log(request);
+      console.log(request.genres);
+      console.log(reqtwo.genres);
       // console.log(fullGenre);
       // console.log("ok");
       let ids = fullGenre.map((o) => o.id);
