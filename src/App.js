@@ -351,3 +351,5 @@ export default withRouter(App);
 // console.log("test3", test3);
 // console.log("test2", test2);
 // console.log("test1", test1);
+
+// "proxy": "https://api.themoviedb.org/3",
