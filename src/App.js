@@ -191,20 +191,42 @@ function App(props) {
       const reqtwo = await blue("tv");
       // const fullGenre = request.concat(reqtwo);
       // const fullGenre = Object.assign({}, request, reqtwo);
-      // var fullGenre = [...request.genres, ...reqtwo.genres];
+      var fullGenre = [...request.genres, ...reqtwo.genres];
 
-      var partone = request.genres;
-      var parttwo = reqtwo.genres;
-      var fullGenre = [...partone, ...parttwo];
+      // console.log(Object.entries(request.genres));
+
+      // var partone = Object.entries(request.genres);
+      // var parttwo = Object.entries(reqtwo.genres);
+
+      // var partone = request.genres.map((genre) => {
+      //   // console.log(genre);
+      //   Object.entries(genre).map(([key, value]) => {
+      //     // console.log(key, value);
+      //     console.log([key, value]);
+      //     return value === true ? [key, value] : null;
+      //   });
+      // });
+
+      // console.log(partone);
+
+      // console.log(parttwo);
+
+      // var fullGenre = [...partone, ...parttwo];
+      // console.log(partone.join(parttwo));
+      // var fullGenre = partone.join(parttwo);
+
+      console.log(fullGenre);
 
       // var unqiueFullGenre = [...new Set(fullGenre)];
       // setGenreList(unqiueFullGenre);
-      console.log(request);
-      console.log(request.genres);
-      console.log(reqtwo.genres);
+      // console.log(request);
+      // console.log(request.genres);
+      // console.log(reqtwo.genres);
       // console.log(fullGenre);
       // console.log("ok");
       let ids = fullGenre.map((o) => o.id);
+      // let ids = fullGenre.map((o) => o[1].id);
+      console.log(ids);
       let filtered = fullGenre.filter(
         ({ id }, index) => !ids.includes(id, index + 1)
       );
