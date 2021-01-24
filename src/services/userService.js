@@ -7,7 +7,7 @@ function signup(user) {
   return fetch(`${BASE_URL}/signup`, {
     method: "POST",
     headers: {
-      "Content-Type": "Application/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(user),
   })
@@ -23,7 +23,7 @@ function login(credentials) {
   return fetch(`${BASE_URL}/login`, {
     method: "POST",
     headers: {
-      "Content-Type": "Application/json",
+      "Content-Type": "application/json",
     },
     body: JSON.stringify(credentials),
   })
