@@ -4,7 +4,7 @@ import { setToken, getUserFromToken, removeToken } from "./tokenService";
 const BASE_URL = "https://def-not-netflix-bkend.herokuapp.com/api/users";
 
 function signup(user) {
-  return fetch(`${BASE_URL}/signup`, {
+  return fetch(BASE_URL + "/signup", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -20,7 +20,7 @@ function signup(user) {
 
 function login(credentials) {
   console.log(credentials);
-  return fetch(`${BASE_URL}/login`, {
+  return fetch(BASE_URL + "/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
