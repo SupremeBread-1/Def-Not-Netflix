@@ -4,7 +4,14 @@ import "./Row.css";
 
 const base_url = "https://image.tmdb.org/t/p/original/";
 
-function Row({ title, fetchUrl, isLargeRow, handleInfo, imgVidShower }) {
+function Row({
+  title,
+  fetchUrl,
+  isLargeRow,
+  handleInfo,
+  imgVidShower,
+  imagesVideos,
+}) {
   const [movies, setMovies] = useState([]);
 
   const [imgVidRow, setImgVidRow] = useState(false);
@@ -37,7 +44,17 @@ function Row({ title, fetchUrl, isLargeRow, handleInfo, imgVidShower }) {
         <>
           {imgVidRow ? (
             <>
-              <div>no</div>
+              {
+                <div>
+                  {
+                    <p>
+                      {imagesVideos[0]?.backdrops?.map(
+                        (images) => images?.file_path
+                      )}
+                    </p>
+                  }
+                </div>
+              }
             </>
           ) : (
             <>

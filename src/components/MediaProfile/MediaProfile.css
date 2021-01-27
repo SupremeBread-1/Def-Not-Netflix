@@ -67,8 +67,8 @@
 .show__imgvid {
   border: 2px solid green;
   position: absolute;
-  /* width: 100%; */
-  width: 80%;
+  width: 100%;
+  /* width: 80%; */
   height: 20%;
   /* top: 0; */
   bottom: 0;
