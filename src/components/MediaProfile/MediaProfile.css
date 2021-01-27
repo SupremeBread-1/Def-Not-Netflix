@@ -48,6 +48,8 @@
   width: 70%;
   position: absolute;
   right: 0;
+  /* right: -10; */
+  overflow: hidden;
 }
 
 .show__backgroundLittleContainer {
@@ -61,3 +63,14 @@
 }
 
 /* 30px  */
+
+.show__imgvid {
+  border: 2px solid green;
+  position: absolute;
+  /* width: 100%; */
+  width: 80%;
+  height: 20%;
+  /* top: 0; */
+  bottom: 0;
+  left: 20;
+}

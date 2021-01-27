@@ -9,6 +9,8 @@ function MediaProfile(props) {
   // console.log(props.genreList);
   const lister = props.genreList;
 
+  console.log(props.imagesVideos);
+
   function genreFind(id) {
     const genreArr = [];
     for (const genre of id) {
@@ -63,7 +65,7 @@ function MediaProfile(props) {
         ></div>
       </div>
       <div className="show__imgvid">
-        <Row imgVidShower title="Images" />
+        <Row imgVidShower title="Videos & Images" />
       </div>
     </div>
   );
