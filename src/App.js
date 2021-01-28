@@ -121,7 +121,8 @@ function App(props) {
           movie?.name ||
           movie?.original_name
         ) {
-          // console.log(test1?.title || test1?.name || test1?.original_name);
+          console.log(test1?.title || test1?.name || test1?.original_name);
+          console.log(movie?.title || movie?.name || movie?.original_name);
           // return test1;
           setImgVid([test1?.images, test1?.videos]);
           // console.log(imgVid);
@@ -215,7 +216,7 @@ function App(props) {
       // console.log(partone.join(parttwo));
       // var fullGenre = partone.join(parttwo);
 
-      console.log(fullGenre);
+      // console.log(fullGenre);
 
       // var unqiueFullGenre = [...new Set(fullGenre)];
       // setGenreList(unqiueFullGenre);
@@ -226,7 +227,7 @@ function App(props) {
       // console.log("ok");
       let ids = fullGenre.map((o) => o.id);
       // let ids = fullGenre.map((o) => o[1].id);
-      console.log(ids);
+      // console.log(ids);
       let filtered = fullGenre.filter(
         ({ id }, index) => !ids.includes(id, index + 1)
       );

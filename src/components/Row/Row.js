@@ -44,17 +44,40 @@ function Row({
         <>
           {imgVidRow ? (
             <>
-              {
-                <div>
-                  {
-                    <p>
-                      {imagesVideos[0]?.backdrops?.map(
-                        (images) => images?.file_path
-                      )}
-                    </p>
-                  }
-                </div>
-              }
+              {(imagesVideos[0]?.backdrops.length == 0) &
+                (imagesVideos[0]?.posters.length == 0) &
+                (imagesVideos[1]?.results.length == 0) ||
+              imagesVideos[0]?.profiles ? (
+                <div>No Results</div>
+              ) : (
+                <>
+                  {imagesVideos[1]?.results.map((video) => (
+                    <iframe
+                      src={`https://www.youtube.com/embed/${video.key}`}
+                      frameBorder="0"
+                      key={video.id}
+                    >
+                      {video.name}
+                    </iframe>
+                  ))}
+                  {imagesVideos[0]?.backdrops?.map((images) => (
+                    <img
+                      key={images?.file_path}
+                      className="row__poster"
+                      src={`${base_url}${images?.file_path}`}
+                      alt={images?.file_path}
+                    />
+                  ))}
+                  {imagesVideos[0]?.posters?.map((image) => (
+                    <img
+                      key={image?.file_path}
+                      className="row__poster"
+                      src={`${base_url}${image?.file_path}`}
+                      alt={image?.file_path}
+                    />
+                  ))}
+                </>
+              )}
             </>
           ) : (
             <>
