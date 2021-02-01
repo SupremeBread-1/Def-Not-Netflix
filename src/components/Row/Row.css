@@ -37,3 +37,7 @@
 .row__posterLarge:hover {
   transform: scale(1.09);
 }
+
+.row__video {
+  margin-right: 10px;
+}

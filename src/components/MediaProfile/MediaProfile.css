@@ -74,3 +74,9 @@
   bottom: 0;
   left: 20;
 }
+
+@media (max-height: 1035px) {
+  /* .show__imgvid {
+    height: 10%;
+  } */
+}

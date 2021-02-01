@@ -56,6 +56,7 @@ function Row({
                       src={`https://www.youtube.com/embed/${video.key}`}
                       frameBorder="0"
                       key={video.id}
+                      className="row__video"
                     >
                       {video.name}
                     </iframe>
