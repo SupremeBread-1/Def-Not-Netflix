@@ -2,7 +2,7 @@
   position: absolute;
   margin-left: 30px;
   color: #fff;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
   height: 300px;
   z-index: 1;
 }
@@ -40,12 +40,13 @@
 
 .show__backgroundBigContainer {
   border: 2px solid #111;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   /* height: 100%; */
   /* height: 56%; */
   /* width: 80%; */
   height: 70%;
   width: 70%;
+  /* min-width: 600px; */
   position: absolute;
   right: 0;
   /* right: -10; */
@@ -65,7 +66,7 @@
 /* 30px  */
 
 .show__imgvid {
-  border: 2px solid green;
+  /* border: 2px solid green; */
   position: absolute;
   width: 100%;
   /* width: 80%; */
@@ -74,6 +75,8 @@
   /* top: 0; */
   bottom: 0;
   left: 20;
+  display: flex;
+  align-items: center;
 }
 
 @media (max-height: 1035px) {

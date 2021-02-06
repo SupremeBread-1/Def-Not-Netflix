@@ -1,7 +1,7 @@
 .row {
   margin-left: 20px;
   color: #fff;
-  border: 2px solid blue;
+  /* border: 2px solid blue; */
 }
 
 .row__posters {
@@ -10,7 +10,7 @@
   overflow-y: hidden;
   overflow-x: scroll;
   padding: 20px;
-  border: 2px solid orange;
+  /* border: 2px solid orange; */
 }
 
 .row__posters::-webkit-scrollbar {
